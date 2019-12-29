@@ -69,6 +69,7 @@ public class JwtTokenProvider {
     
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = this.userDetailsService.loadUserByUsername(getUsername(token));
+        System.out.println("getAuth----"+userDetails.getAuthorities().toArray()[0].toString());
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
@@ -105,6 +106,8 @@ public class JwtTokenProvider {
         userRoles.forEach(role -> {
             result.add(role.getRoleName());
         });
+        
+        System.out.println("ROLENAME-"+result.get(0));
 
         return result;
     }

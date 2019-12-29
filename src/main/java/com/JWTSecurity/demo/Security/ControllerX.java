@@ -49,7 +49,7 @@ public class ControllerX
 	   // }
 	    
 	    @SuppressWarnings("deprecation")
-		@GetMapping("/rest")
+		@GetMapping("/rest/d")
 	    public String xxx()
 	    {
 	    	//return x.findById(new Long(1)).get().getRoleName();

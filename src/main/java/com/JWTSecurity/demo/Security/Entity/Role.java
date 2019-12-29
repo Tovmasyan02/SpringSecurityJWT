@@ -35,7 +35,7 @@ public class Role {
 	}
 
 	public String getRoleName() {
-		return roleName;
+		return "ROLE_"+roleName;
 	}
 
 	public void setRoleName(String roleName) {

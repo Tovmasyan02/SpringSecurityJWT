@@ -30,6 +30,7 @@ public class JwtUser implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
+		System.out.println("Size --"+this.authorities.size());
 		return this.authorities;
 	}
 
